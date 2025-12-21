@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Dictionary>
+      <Words>
+         <Unrecognized>
+            <Word></Word>
+         </Unrecognized>
+         <Recognized>
+             <Word>hicmah</Word>
+             <Word>Hicmah</Word>
+             <Word>Utils</Word>
+             <Word>AppSettings</Word>
+             <Word>Flot</Word> <!-- flot graph library-->
+             <Word>Lite</Word> <!-- SQLite-->
+         </Recognized>
+         <Deprecated>
+            <Term PreferredAlternate=""></Term>
+         </Deprecated>
+         <Compound>
+            <Term CompoundAlternate=""></Term>
+         </Compound>
+         <DiscreteExceptions>
+            <Term></Term>
+         </DiscreteExceptions>
+      </Words>
+      <Acronyms>
+         <CasingExceptions>
+            <Acronym>Asmx</Acronym>
+             <Acronym>Db</Acronym>
+             <Acronym>Ms</Acronym>
+             <Acronym>Jq</Acronym>
+             <Acronym>LCID</Acronym>
+             
+         </CasingExceptions>
+      </Acronyms>
+   </Dictionary>

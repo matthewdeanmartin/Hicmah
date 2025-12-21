@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1EFC325B-5660-4EB7-9EB2-60F0ADD235EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hicmah</RootNamespace>
+    <AssemblyName>Hicmah</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DatabaseSchemaReader, Version=1.2.4.17096, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Database.Schema.Reader.Core.1.2.4.17096\lib\net35\DatabaseSchemaReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataglot">
+      <HintPath>..\References\Static_DbSettings\Dataglot.dll</HintPath>
+    </Reference>
+    <Reference Include="Essential.Diagnostics">
+      <HintPath>..\packages\Essential.Diagnostics.1.1.20103.0\lib\Essential.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="IrishSettings">
+      <HintPath>..\References\Static_DbSettings\IrishSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.4\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.480, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\protobuf-net.2.0.0.480\lib\net35\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ukadc.Diagnostics">
+      <HintPath>..\packages\Ukadc.Diagnostics.Unofficial.1.0.61915.0\lib\net30\Ukadc.Diagnostics.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\AdministrationFactory.cs" />
+    <Compile Include="Administration\DatabaseAdministration.cs" />
+    <Compile Include="Administration\DatabaseAdministrationForSql.cs" />
+    <Compile Include="Administration\DatabaseInstaller.cs" />
+    <Compile Include="Administration\TableInfo.cs" />
+    <Compile Include="Administration\Ts.cs" />
+    <Compile Include="ChartDataServices\ChartDataHandler.cs" />
+    <Compile Include="ChartData\BarChartData.cs" />
+    <Compile Include="ChartData\ChartAttackingUsersCached.cs" />
+    <Compile Include="ChartData\ChartAttackingUsersFormatter.cs" />
+    <Compile Include="ChartData\ChartBrokenLinksCached.cs" />
+    <Compile Include="ChartData\ChartBuggiestPagesCached.cs" />
+    <Compile Include="ChartData\ChartBuggiestPagesFormatter.cs" />
+    <Compile Include="ChartData\ChartHitsPerTimeSpan.cs" />
+    <Compile Include="ChartData\ChartHitsPerTimeSpanCached.cs" />
+    <Compile Include="ChartData\ChartHitsPerTimeSpanFormatter.cs" />
+    <Compile Include="ChartData\ChartSufferingUsersCached.cs" />
+    <Compile Include="ChartData\ChartSufferingUsersFormatter.cs" />
+    <Compile Include="ChartData\JqGridData.cs" />
+    <Compile Include="ChartData\TimeSeriesChartData.cs" />
+    <Compile Include="DataConfiguration\DbSettingFetcher.cs" />
+    <Compile Include="DataConfiguration\DbSettingsProvider .cs" />
+    <Compile Include="DataCache\CacheClearExpired.cs" />
+    <Compile Include="DataCache\CacheInDb.cs" />
+    <Compile Include="DataCache\CacheInsert.cs" />
+    <Compile Include="ChartData\ChartAttackedPages.cs" />
+    <Compile Include="ChartData\ChartAttackedPagesCached.cs" />
+    <Compile Include="ChartData\ChartAttackedPagesFormatter.cs" />
+    <Compile Include="ChartData\ChartAttackingUsers.cs" />
+    <Compile Include="ChartData\ChartBrokenLinks.cs" />
+    <Compile Include="ChartData\ChartSufferingUsers.cs" />
+    <Compile Include="ChartData\ChartTop.cs" />
+    <Compile Include="ChartData\ChartBuggiestPages.cs" />
+    <Compile Include="ChartData\ChartNewUsersByMonth.cs" />
+    <Compile Include="ChartData\DateValueBinder.cs" />
+    <Compile Include="DataSettings\HicmahSetingsCollection.cs" />
+    <Compile Include="DataSettings\HicmahSettingsManager.cs" />
+    <Compile Include="DataSettings\HicmahSettings.cs" />
+    <Compile Include="Dimensions\InsertEnum.cs" />
+    <Compile Include="Dimensions\InsertTime.cs" />
+    <Compile Include="Dimensions\ProcessConstantDimensions.cs" />
+    <Compile Include="Dimensions\ProcessTimeDimension.cs" />
+    <Compile Include="Dimensions\ProcessTimeZoneDimension.cs" />
+    <Compile Include="Dimensions\UpdateTimeOnPageMeasure.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Misc\AssemblyLoading.cs" />
+    <Compile Include="Misc\ConfigUtils.cs" />
+    <Compile Include="Contracts\Enums.cs" />
+    <Compile Include="Contracts\Hit.cs" />
+    <Compile Include="DataCache\CacheRead.cs" />
+    <Compile Include="Dimensions\InsertDate.cs" />
+    <Compile Include="Dimensions\ProcessDateDimension.cs" />
+    <Compile Include="Dimensions\ProcessDimensions.cs" />
+    <Compile Include="Misc\DateUtils.cs" />
+    <Compile Include="Misc\StaticFiles.cs" />
+    <Compile Include="Misc\TraceSourceUtil.cs" />
+    <Compile Include="Misc\TraceUtils.cs" />
+    <Compile Include="Misc\AccessUtils.cs" />
+    <Compile Include="Recorders\BufferedLookup.cs" />
+    <Compile Include="Recorders\HitRecorderMsSqlCached.cs" />
+    <Compile Include="Recorders\HitRecorderMsSqlCachedBulk.cs" />
+    <Compile Include="Recorders\CachedLookupSql.cs" />
+    <Compile Include="Recorders\HitReader.cs" />
+    <Compile Include="Recorders\HitRecorderFactory.cs" />
+    <Compile Include="Recorders\LookupReader.cs" />
+    <Compile Include="Recorders\HitRecorderMsSql.cs" />
+    <Compile Include="Dimensions\UpdateUserUsage.cs" />
+    <Compile Include="Dimensions\ProcessUserDimension.cs" />
+    <Compile Include="Dimensions\ProcessUriDimension.cs" />
+    <Compile Include="Dimensions\UpdateUrl.cs" />
+    <Compile Include="Web\HitFactory.cs" />
+    <Compile Include="Web\HitHandler.cs" />
+    <Compile Include="Web\HitHandlerAsync.cs" />
+    <Compile Include="Web\HitModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recorders\IHitRecorder.cs" />
+    <Compile Include="Web\GenericHitProcessor.cs" />
+    <Compile Include="SimulateHits\HitSimulator.cs" />
+    <Compile Include="Misc\TimedLock.cs" />
+    <Compile Include="ChartData\ChartConcurrentUsers.cs" />
+    <Compile Include="Administration\DatabaseInformationSql.cs" />
+    <Compile Include="ChartData\RecentHitsTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wrappers\Wrappers.csproj">
+      <Project>{DD4A7D0A-0FE1-4FC9-B638-8D70613A7EB7}</Project>
+      <Name>Wrappers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomDictionary.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

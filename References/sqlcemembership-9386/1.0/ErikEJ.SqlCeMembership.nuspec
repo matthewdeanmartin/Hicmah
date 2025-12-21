@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>ErikEJ.SqlCeMembership</id>
+    <version>1.0.0.0</version>
+    <authors>http://erikej.blogspot.com</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://sqlcemembership.codeplex.com</projectUrl>
+    <licenseUrl>http://sqlcemembership.codeplex.com/license</licenseUrl>
+    <description>ASP.NET Membership and Role Provider that uses SQL Server Compact 4.0 as data store.</description>
+    <summary>ASP.NET Membership and Role Provider that uses SQL Server Compact 4.0 as data store.</summary>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="SQLCE" minVersion="4.0.8402.1" />
+    </dependencies>
+  </metadata>
+</package>

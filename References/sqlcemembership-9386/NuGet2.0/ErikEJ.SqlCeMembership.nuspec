@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>ErikEJ.SqlCeMembership</id>
+    <version>2.1.0.1</version>
+    <authors>http://erikej.blogspot.com</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://sqlcemembership.codeplex.com</projectUrl>
+    <licenseUrl>http://sqlcemembership.codeplex.com/license</licenseUrl>
+    <description>ASP.NET Membership and Role Provider that uses SQL Server Compact 4.0 as data store. Version 2.1 adds a ProfileProvider, and includes a number of bug fixes and 2 additional methods.</description>
+    <summary>ASP.NET Membership and Role Provider that uses SQL Server Compact 4.0 as data store. Database schema is compatible with SQL Server schema.</summary>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="SqlServerCompact" version="4.0.8482.1" />
+    </dependencies>
+    <tags>sqlce, ASP.NET, membership, Roles, sqlservercompact</tags>
+  </metadata>
+</package>

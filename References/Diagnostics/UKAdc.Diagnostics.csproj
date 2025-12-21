@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{091DA3B6-0460-4EAE-8798-3576129A98CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ukadc.Diagnostics</RootNamespace>
+    <AssemblyName>Ukadc.Diagnostics</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Ukadc.Diagnostics.XML</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Ukadc.Diagnostics.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AbstractDataPropertyElement.cs" />
+    <Compile Include="Configuration\AbstractTokenElement.cs" />
+    <Compile Include="Configuration\TokenElement.cs" />
+    <Compile Include="Configuration\TokenElementCollection.cs" />
+    <Compile Include="Configuration\UkadcDiagnosticsSection.cs" />
+    <Compile Include="Configuration\DataPropertyElement.cs" />
+    <Compile Include="ExtendedSource.cs" />
+    <Compile Include="ExtendedTraceEventCache.cs" />
+    <Compile Include="Filters\Configuration\PropertyFilterElement.cs" />
+    <Compile Include="Filters\Configuration\PropertyFilterElementCollection.cs" />
+    <Compile Include="Filters\Configuration\FilterElement.cs" />
+    <Compile Include="Filters\Configuration\FilterElementCollection.cs" />
+    <Compile Include="Filters\Configuration\FilterGroupElement.cs" />
+    <Compile Include="Filters\Configuration\FilterGroupElementCollection.cs" />
+    <Compile Include="Filters\MultiFilterGroup.cs" />
+    <Compile Include="Filters\FilterGroupType.cs" />
+    <Compile Include="Filters\MultiFilterMember.cs" />
+    <Compile Include="Filters\MultiFilter.cs" />
+    <Compile Include="Listeners\Configuration\SmtpTraceListenerElement.cs" />
+    <Compile Include="Listeners\Configuration\SmtpTraceListenerElementCollection.cs" />
+    <Compile Include="Listeners\Configuration\ParameterElement.cs" />
+    <Compile Include="Listeners\Configuration\ParameterElementCollection.cs" />
+    <Compile Include="Listeners\Configuration\SqlTraceListenerElement.cs" />
+    <Compile Include="Listeners\Configuration\SqlTraceListenerElementCollection.cs" />
+    <Compile Include="Listeners\ConsoleTraceListener.cs" />
+    <Compile Include="Listeners\DebuggerTraceListener.cs" />
+    <Compile Include="Listeners\FileTraceListener.cs" />
+    <Compile Include="Listeners\IDataAccessAdapter.cs" />
+    <Compile Include="Listeners\IDataAccessCommand.cs" />
+    <Compile Include="Listeners\IProxyTraceService.cs" />
+    <Compile Include="Listeners\ISmtpService.cs" />
+    <Compile Include="Listeners\IStreamWriterCache.cs" />
+    <Compile Include="Listeners\OutputDebugStringTraceListener.cs" />
+    <Compile Include="Listeners\ProxyTraceListener.cs" />
+    <Compile Include="Listeners\SmtpService.cs" />
+    <Compile Include="Listeners\SmtpTraceListener.cs" />
+    <Compile Include="Listeners\SqlDataAccessAdapter.cs" />
+    <Compile Include="Listeners\SqlDataAccessCommand.cs" />
+    <Compile Include="Listeners\SqlTraceListener.cs" />
+    <Compile Include="Listeners\SqlTraceParameter.cs" />
+    <Compile Include="Listeners\StreamWriterCache.cs" />
+    <Compile Include="TraceEvent.cs" />
+    <Compile Include="Utils\Disposer.cs" />
+    <Compile Include="Utils\ObjectComparator.cs" />
+    <Compile Include="Utils\DefaultServiceLocator.cs" />
+    <Compile Include="Utils\IInternalLogger.cs" />
+    <Compile Include="Utils\InternalLogger.cs" />
+    <Compile Include="Utils\LazyInit.cs" />
+    <Compile Include="Utils\PropertyReaders\ActivityIdPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\CombinedPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\CombinedPropertyReaderFactory.cs" />
+    <Compile Include="Utils\PropertyReaders\FastPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\FormattedPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\LocalTimePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\ProcessNamePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\ProcessPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\WindowsIdentityPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\PrincipalNamePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\DatePartPropertyReaders.cs" />
+    <Compile Include="Utils\PropertyReaders\TimestampPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\ICombinedPropertyReaderFactory.cs" />
+    <Compile Include="Utils\PropertyReaders\IPropertyReaderFactory.cs" />
+    <Compile Include="Utils\PropertyReaders\LiteralPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\MachineNamePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\RelatedActivityIdPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\SourcePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\EventTypePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\StringPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\PropertyReaderFactory.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\FastPropertyGetter.cs" />
+    <Compile Include="Utils\IComparator.cs" />
+    <Compile Include="Utils\PropertyReaders\CallStackPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\DateTimePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\DynamicPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\IdPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\MessagePropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\ProcessIdPropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\PropertyReader.cs" />
+    <Compile Include="Utils\PropertyReaders\ThreadIdPropertyReader.cs" />
+    <Compile Include="Utils\PropertyResult.cs" />
+    <Compile Include="Utils\Operation.cs" />
+    <Compile Include="Filters\PropertyFilter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Listeners\CustomTraceListener.cs" />
+    <Compile Include="Listeners\InMemoryTraceListener.cs" />
+    <Compile Include="Listeners\InMemoryTraceObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\NumericComparator.cs" />
+    <Compile Include="Utils\RelatedPropertyIdStore.cs" />
+    <Compile Include="Utils\SafeNativeMethods.cs" />
+    <Compile Include="Utils\ServiceLocator.cs" />
+    <Compile Include="Utils\StringComparator.cs" />
+    <Compile Include="Utils\StringFormatter.cs" />
+    <Compile Include="Utils\Token.cs" />
+    <Compile Include="Utils\TraceUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

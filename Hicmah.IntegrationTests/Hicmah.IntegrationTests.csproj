@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE0235D0-1643-4382-B247-AEE84295A4B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Himah.IntegrationTests</RootNamespace>
+    <AssemblyName>Hicmah.IntegrationTests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DatabaseSchemaReader, Version=1.2.4.17096, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Database.Schema.Reader.Core.1.2.4.17096\lib\net35\DatabaseSchemaReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Dataglot">
+      <HintPath>..\References\Static_DbSettings\Dataglot.dll</HintPath>
+    </Reference>
+    <Reference Include="IrishSettings">
+      <HintPath>..\References\Static_DbSettings\IrishSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserAutomation\ActualHandlerRequests.cs" />
+    <Compile Include="Admin\AdministrationTests.cs" />
+    <Compile Include="Charts\GenerateTestData.cs" />
+    <Compile Include="ConfigTests\DbSettingsTests.cs" />
+    <Compile Include="ConfigTests\SimplifiedDataSettingsTests.cs" />
+    <Compile Include="HitRecorders\CachedHits.cs" />
+    <Compile Include="HitRecorders\CachedHitsWithSqlBulkCopy.cs" />
+    <Compile Include="Charts\DataAndCharts.cs" />
+    <Compile Include="Fakes\FakeCache.cs" />
+    <Compile Include="HitMaker.cs" />
+    <Compile Include="HitRecorders\OnlyGenerateSampleData.cs" />
+    <Compile Include="HitRecorders\SimulateHitsForSqlServer.cs" />
+    <Compile Include="Migrations\GenerateCodeForTables.cs" />
+    <Compile Include="Migrations\InstallInitial.cs" />
+    <Compile Include="Migrations\TimeUnitTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hicmah.IntegrationTests.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hicmah\Hicmah.csproj">
+      <Project>{1EFC325B-5660-4EB7-9EB2-60F0ADD235EB}</Project>
+      <Name>Hicmah</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrappers\Wrappers.csproj">
+      <Project>{DD4A7D0A-0FE1-4FC9-B638-8D70613A7EB7}</Project>
+      <Name>Wrappers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
